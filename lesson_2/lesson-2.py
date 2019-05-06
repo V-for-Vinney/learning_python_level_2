@@ -21,7 +21,7 @@ def save_to_csv(data, file):
     with open(file, 'w', encoding='utf-8', newline='') as f_d:
         out_csv = csv.writer(f_d, delimiter=',', quoting=csv.QUOTE_ALL)
         out_csv.writerow(csv_header)
-        [out_csv.writerow(line) for line in data]
+        out_csv.writerows(data)
 
 
 def write_orders_to_json(**kwargs):
