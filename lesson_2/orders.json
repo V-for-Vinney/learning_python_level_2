@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "buyer": "Romanian Empire",
+      "currency": "Tyrian Shekel",
+      "date": "0033-04-03",
+      "item": "Judas conscience",
+      "price": 30,
+      "quantity": 1,
+      "uuid": "b36dfc95-c9db-426c-85fa-4d832b02c7f9"
+    },
+    {
+      "buyer": "North Atlantic Treaty Organization",
+      "currency": "USD",
+      "date": "1990-10-15",
+      "item": "USSR citizens",
+      "price": 1000000,
+      "quantity": 288600000,
+      "uuid": "56b9c510-4ed8-4a70-bb2e-87e3ebfef242"
+    }
+  ]
+}
