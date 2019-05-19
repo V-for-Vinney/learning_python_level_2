@@ -2,7 +2,7 @@ import socket
 import json
 import time
 import datetime
-from config import Common, Const
+from config import Common
 
 
 class MsgrBase:
@@ -61,11 +61,11 @@ class MsgrServer(MsgrConnection):
 
     def create_response(self, code: int, msg=''):
         response = {
-            Const.RESPONSE: code,
-            Const.TIME: time.time(),
+            Common.RESPONSE: code,
+            Common.TIME: time.time(),
         }
         if 200 <= code < 300:
-            response[Const.ALERT] = msg
+            response[Common.ALERT] = msg
         return response
 
 
@@ -77,21 +77,21 @@ class MsgrClient(MsgrConnection):
     def parse_response(self, response):
         try:
             response = dict(response)
-            code = response[Const.RESPONSE]
-            f_time = datetime.datetime.fromtimestamp(float(response[Const.TIME])).strftime(Common.DATETIME_FORMAT)
-            alert = response[Const.ALERT]
+            code = response[Common.RESPONSE]
+            f_time = datetime.datetime.fromtimestamp(float(response[Common.TIME])).strftime(Common.DATETIME_FORMAT)
+            alert = response[Common.ALERT]
             return code, f_time, alert
         except Exception:
             raise ValueError
 
     def create_presence(self, account_name, status):
         presence_msg = {
-            Const.ACTION: Const.PRESENCE,
-            Const.TIME: time.time(),
-            Const.TYPE: Const.STATUS,
-            Const.USER: {
-                Const.ACCOUNT: account_name,
-                Const.STATUS: status
+            Common.ACTION: Common.PRESENCE,
+            Common.TIME: time.time(),
+            Common.TYPE: Common.STATUS,
+            Common.USER: {
+                Common.ACCOUNT: account_name,
+                Common.STATUS: status
             }
         }
         return presence_msg

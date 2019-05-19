@@ -5,13 +5,11 @@ def get_current_time():  # абстрагирует нас от конкретн
     return time.time()
 
 
-class Common:  # Config for JIM protocol keywords:
+class Common:
     DEFAULT_ENCODING = 'utf-8'
     BUFFER_SIZE = 4096
     DATETIME_FORMAT = '%d.%m.%Y-%H:%M:%S'
-
-
-class Const:
+    
     USER = 'user'
     TO = 'send_to'
     FROM = 'send_from'
@@ -37,7 +35,7 @@ class Const:
     TYPE = 'type'
 
 
-class Code:
+class HTTPResponseCode:
     # 1xx - уведомление:
     BASIC_NOTICE = 100
     IMPORTANT_NOTICE = 101

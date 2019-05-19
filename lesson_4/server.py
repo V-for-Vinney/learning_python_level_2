@@ -1,5 +1,5 @@
 import argparse
-from config import Code
+from config import HTTPResponseCode
 from msgr_core import MsgrListener
 
 
@@ -17,5 +17,5 @@ if __name__ == '__main__':
                 print('Client connected.')
                 while data:
                     print(data)
-                    srv_connection.send(srv_connection.create_response(code=Code.OK))
+                    srv_connection.send(srv_connection.create_response(code=HTTPResponseCode.OK))
                     data = srv_connection.receive()
