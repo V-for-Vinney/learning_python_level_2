@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f304e83-f351-4050-b914-d3a1560e1cf5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/learning_python_level_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning_python_level_2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -242,6 +241,14 @@
       <option name="presentableId" value="Default" />
       <updated>1557957972237</updated>
     </task>
+    <task id="LOCAL-00001" summary="ДЗ №5">
+      <created>1558308892195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558308892195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -263,7 +270,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42079207" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42079207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -298,6 +305,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ДЗ №5" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ №5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

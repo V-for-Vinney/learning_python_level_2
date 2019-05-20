@@ -17,6 +17,7 @@ if __name__ == '__main__':
                 client.send(client.create_presence(account_name='user', status='Yep!'))
                 response = client.receive()
                 code, timestamp, alert = client.parse_response(response)
-                cli_logger.info(','.join(map(lambda x: str(x), [code, timestamp, alert])))
+                log_lst = map(lambda x: str(x), [code, timestamp, alert])
+                cli_logger.info(','.join(log_lst))
             except TypeError:
                 cli_logger.error(f"Raised type error on payload: {response}")

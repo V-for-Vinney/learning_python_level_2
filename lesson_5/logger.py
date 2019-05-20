@@ -62,7 +62,7 @@ srv_logger = get_logger(log_conf=LOG_SRV)
 cli_logger = get_logger(log_conf=LOG_CLI)
 
 
-def log_func(func_to_log):
+def log_func_call(func_to_log):
     @wraps(func_to_log)
     def wrapper(*args, **kwargs):
         module = func_to_log.__module__
