@@ -2,7 +2,7 @@ import socket
 import json
 import time
 import datetime
-from config import Common, JIM
+from config import Common, JIM, HTTPResponseCode
 
 from logger import log_func_call, dbg_logger, srv_logger, cli_logger, log_and_print
 
@@ -93,7 +93,7 @@ class MsgrServerConnection(MsgrConnection):
             JIM.RESPONSE: code,
             JIM.TIME: time.time(),
         }
-        if 200 <= code < 300:
+        if HTTPResponseCode.OK[0] <= code < HTTPResponseCode.RESERVED[0]:
             response[JIM.ALERT] = msg
         return response
 

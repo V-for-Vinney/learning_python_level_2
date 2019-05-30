@@ -20,7 +20,7 @@ class MsgrTest(unittest.TestCase):
         self.virt_msgr_obj._sock.recv.return_value = self.virt_bytes
         self.virt_msgr_obj._sock.accept.return_value = (self.virt_msgr_obj._sock, self.virt_addr)
 
-        self.code = HTTPResponseCode.OK
+        self.code = HTTPResponseCode.OK[0]
         self.checking_field = JIM.RESPONSE
 
         self.user, self.status = 'some_user', 'some status'
@@ -34,7 +34,7 @@ class MsgrTest(unittest.TestCase):
             }
         }
 
-        self.code, self.f_time, self.alert = HTTPResponseCode.OK, time.time(), "OK"
+        self.code, self.f_time, self.alert = HTTPResponseCode.OK[0], time.time(), "OK"
         self.response = {
             JIM.RESPONSE: self.code,
             JIM.TIME: self.f_time,

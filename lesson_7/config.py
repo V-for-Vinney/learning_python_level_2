@@ -41,40 +41,24 @@ class JIM:
 
 class HTTPResponseCode:
     # 1xx - уведомление:
-    BASIC_NOTICE = 100
-    IMPORTANT_NOTICE = 101
+    BASIC_NOTICE = (100, 'обычное уведомление')
+    IMPORTANT_NOTICE = (101, 'важное уведомление')
     # 2xx - успешное завершение:
-    OK = 200
-    CREATED = 201
-    CONFIRMED = 202
+    OK = (200, 'OK')
+    CREATED = (201, 'объект создан')
+    CONFIRMED = (202, 'подтверждение')
+    # 3xx - зарезервировано
+    RESERVED = (300, 'зарезервировано')
     # 4xx - ошибка на стороне клиента:
-    BAD_REQUEST = 400
-    NEED_AUTH = 401
-    BAD_AUTH = 402
-    FORBIDDEN = 403
-    NOT_FOUND = 404
-    ALREADY_CONNECTED = 409
-    UNAVAILABLE = 410
-    ALREADY_EXISTS = 411
-    ALREADY_DONE = 412
+    BAD_REQUEST = (400, 'неправильный запрос/JSON-объект')
+    NEED_AUTH = (401, 'не авторизован')
+    BAD_AUTH = (402, 'неправильный логин/пароль')
+    FORBIDDEN = (403, 'пользователь заблокирован')
+    NOT_FOUND = (404, 'пользователь/чат отсутствует на сервере')
+    ALREADY_CONNECTED = (409, 'уже имеется подключение с указанным логином')
+    UNAVAILABLE = (410, 'адресат существует, но недоступен')
+    ALREADY_EXISTS = (411, 'чат с таким названием уже существует')
+    ALREADY_DONE = (412, 'пользователь уже был добавлен/удален ранее')
     # 5xx - ошибка на стороне сервера:
-    UNKNOWN_ERROR = 500
+    UNKNOWN_ERROR = (500, 'неизвестная ошибка сервера')
 
-    COMMENTS = {
-        BASIC_NOTICE: 'обычное уведомление',
-        IMPORTANT_NOTICE: 'важное уведомление',
-        OK: 'OK',
-        CREATED: 'объект создан',
-        CONFIRMED: 'подтверждение',
-        BAD_REQUEST: 'неправильный запрос/JSON-объект',
-        NEED_AUTH: 'не авторизован',
-        BAD_AUTH: 'неправильный логин/пароль',
-        FORBIDDEN: 'пользователь заблокирован',
-        NOT_FOUND: 'пользователь/чат отсутствует на сервере',
-        ALREADY_CONNECTED: 'уже имеется подключение с указанным логином',
-        UNAVAILABLE: 'адресат существует, но недоступен',
-        ALREADY_EXISTS: 'чат с таким названием уже существует',
-        ALREADY_DONE: 'пользователь уже был добавлен/удален ранее',
-        UNKNOWN_ERROR: 'неизвестная ошибка сервера'
-    }
-    VALUES = tuple(COMMENTS.keys())

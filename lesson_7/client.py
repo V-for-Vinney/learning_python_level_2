@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument("-a", "--address", type=str, help="server ip (default=127.0.0.1)", default='127.0.0.1')
     parser.add_argument("-p", "--port", type=int, help="server port number (default=7777)", default=7777)
     parser.add_argument("-u", "--user", type=str, help="username (default=\"anonymous\")", default=f'anonymous_{rnd}')
-    parser.add_argument("-r", "--receiver", type=bool, help="is receiver", default='yes')
+    parser.add_argument("-r", "--receiver", type=str, help="for receiver mode type \"y\"", default='y')
     args = parser.parse_args()
 
     with MsgrClientConnection(server=args.address, port=args.port, account=args.user, new_status='Yep!') as client:
